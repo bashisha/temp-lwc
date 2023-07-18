@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-06-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+  <lightning-card title="Hello World" icon-name="custom:custom14">
+    <div class="slds-m-around_medium">
+      <p>Hi, {message}</p>
+      <lightning-input
+        label="Name"
+        value={greeting}
+        onchange={handleChange}
+      ></lightning-input>
+    </div>
+  </lightning-card>
+  <lightning-card title="Wire CurrentPageReference" icon-name="custom:custom67">
+    <pre>{currentPageRef}</pre>
+  </lightning-card>
+</template>

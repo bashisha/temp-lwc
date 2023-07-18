@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-07-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+  <lightning-card title="Hello World" icon-name="custom:custom14">
+    <div class="slds-m-around_medium">
+      <p data-id="helloWorld">Hello {message}!</p>
+      <lightning-input
+        label="Name"
+        value={greeting}
+        onchange={handleChange}
+      ></lightning-input>
+    </div>
+
+    <template if:true={accounts}>
+      <template for:each={accounts} for:item="account">
+        <span key={account.Id}>{account.Name}</span>
+      </template>
+    </template>
+    <template if:true={error}>
+      <span>No accounts found.</span>
+    </template>
+    <pre>{currentPageRef}</pre>
+    <template if:true={opps}>
+      <template for:each={opps} for:item="opp">
+        <h2 key={opp.Id}>{opp.Name}</h2>
+      </template>
+    </template>
+  </lightning-card>
+</template>
