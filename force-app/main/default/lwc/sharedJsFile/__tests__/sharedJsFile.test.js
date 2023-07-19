@@ -54,7 +54,6 @@ describe('c-shared-js-file', () => {
          const element = createElement('c-shared-js-file', {
             is: SharedJsFile
         });
-
         // Act
         document.body.appendChild(element);
         //Assert        
