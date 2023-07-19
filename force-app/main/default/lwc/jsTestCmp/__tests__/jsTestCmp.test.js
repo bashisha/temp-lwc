@@ -47,7 +47,7 @@ describe("c-js-test-cmp", () => {
     jest.clearAllMocks();
   });
 
-  it("Check Helloworld message", () => {
+  it("Test dom element-Helloworld message", () => {
     // Arrange
     const element = createElement("c-js-test-cmp", {
       is: JsTestCmp
@@ -58,6 +58,7 @@ describe("c-js-test-cmp", () => {
     // Assert
     const p = element.shadowRoot.querySelector("p[data-id=helloWorld]");
     expect(p.textContent).toBe("Hello World!");
+    expect(p.textContent).to;
   });
 
   it("onChange of inputText should change greeting", () => {
