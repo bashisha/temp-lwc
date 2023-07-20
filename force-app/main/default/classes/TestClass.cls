@@ -1,6 +1,5 @@
 @isTest
-public with sharing class TestClass {
-    
+public with sharing class TestClass {    
         @isTest
         public static void TestClass() {
             String inputCsv = 'first_name,last_name,email\nCodey,"The Bear",codey@salesforce.com'; 
