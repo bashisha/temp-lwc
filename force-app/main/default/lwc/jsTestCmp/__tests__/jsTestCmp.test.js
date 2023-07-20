@@ -47,7 +47,7 @@ describe("c-js-test-cmp", () => {
     jest.clearAllMocks();
   });
 
-  it("Test dom element-Helloworld message", () => {
+  it("Verify dom element-Helloworld message", () => {
     // Arrange
     const element = createElement("c-js-test-cmp", {
       is: JsTestCmp
@@ -139,10 +139,8 @@ describe("c-js-test-cmp", () => {
       is: JsTestCmp
     });
     document.body.appendChild(element);
-
-    // Emit error from @wire
+    
     getAccountList.error();
-
     return Promise.resolve().then(() => {
       // Select elements for validation
       const oppElements = element.shadowRoot.querySelectorAll("h2");

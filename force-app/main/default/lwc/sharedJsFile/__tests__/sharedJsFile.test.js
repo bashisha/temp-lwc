@@ -36,7 +36,7 @@ describe('c-shared-js-file', () => {
         });
     });
 
-    it('fetchData2-return promise-await', async() => {
+    it('fetchData1-return promise-await', async() => {
         // Arrange
         const element = createElement('c-shared-js-file', {
             is: SharedJsFile
@@ -45,8 +45,22 @@ describe('c-shared-js-file', () => {
         // Act
         document.body.appendChild(element);
         //Assert
-        const data = await element.fetchData2();
+        const data = await element.fetchData1();
         expect(data).toBe('Success!');
+    });
+
+
+    it('fetchData1-using reolve reject', async() => {
+        // Arrange
+        const element = createElement('c-shared-js-file', {
+            is: SharedJsFile
+        });
+
+        // Act
+        document.body.appendChild(element);
+        //Assert        
+        await expect(element.fetchData1()).resolves.toBe('Success!');
+        
     });
 
     test('the fetch fails with an error', async () => {

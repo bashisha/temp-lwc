@@ -15,10 +15,7 @@ export default class SharedJsFile extends LightningElement {
         return this.prom;            
     }
 
-    @api
-    async fetchData2(){
-        return this.prom;            
-    }
+    
 
     @api
     async fetchData3(){
