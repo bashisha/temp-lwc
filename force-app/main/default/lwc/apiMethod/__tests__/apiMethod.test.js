@@ -32,7 +32,6 @@ describe('c-api-method', () => {
         const element = createElement('c-api-method', {
             is: ApiMethod
         });
-
         document.body.appendChild(element);
 
         await expect(element).toBeAccessible();
